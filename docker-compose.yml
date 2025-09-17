@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    container_name: myradar-mileage
+    ports:
+      - ${HTTP_PORT}:${HTTP_PORT}
+    logging:
+      options:
+        max-size: "10M"
+    command:
+      "npm run start"
+      
+networks:
+  default:
+    external:
+      name: dockradar_backend

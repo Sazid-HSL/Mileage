@@ -1,0 +1,29 @@
+{
+  "name": "myradar-mileage",
+  "version": "1.0.0",
+  "description": "Mileage microservice for myRadar tracker",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "pm2-runtime start ecosystem.config.js",
+    "test": "jest --detectOpenHandles"
+  },
+  "author": "palatok <shakilbuet63@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@turf/turf": "^6.5.0",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "cron": "^1.8.2",
+    "date-fns": "^2.16.1",
+    "date-fns-tz": "^1.0.12",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
+    "mongoose": "^5.11.4",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
