@@ -1,7 +1,7 @@
-const { add } = require('date-fns')
-const Mileage = require('../Database/Model/Mileage')
+import { add } from 'date-fns'
+import Mileage from '../Database/Model/Mileage.js'
 
-module.exports = class MileageRecordList {
+export default class MileageRecordList {
   async fetch(filter) {
     const items = await Mileage.find(this.makeQuery(filter)).sort({ when: 1 }).exec()
     return items.map(v => v.transform())

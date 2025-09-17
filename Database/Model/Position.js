@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+import mongoose from 'mongoose'
+const { Schema } = mongoose
 
 const schema = new Schema(
   {
@@ -15,4 +15,4 @@ const schema = new Schema(
   { collection: 'positions' }
 )
 
-module.exports = mongoose.model('Position', schema)
+export default mongoose.model('Position', schema)

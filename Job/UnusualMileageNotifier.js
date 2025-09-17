@@ -1,13 +1,13 @@
-const { CronJob } = require('cron')
-const { startOfYesterday, sub } = require('date-fns')
-const { zonedTimeToUtc } = require('date-fns-tz')
+import { CronJob } from 'cron'
+import { startOfYesterday, sub } from 'date-fns'
+import { zonedTimeToUtc } from 'date-fns-tz'
 
-const Mileage = require('../Database/Model/Mileage')
-const Car = require('../Database/Model/Car')
-const PushNotification = require('../Service/PushNotification')
-const MileageNotification = require('../Util/Notification/MileageNotification')
+import Mileage from '../Database/Model/Mileage.js'
+import Car from '../Database/Model/Car.js'
+import PushNotification from '../Service/PushNotification.js'
+import MileageNotification from '../Util/Notification/MileageNotification.js'
 
-module.exports = class UnusualMileageNotifier {
+export default class UnusualMileageNotifier {
   constructor() {
     this.notificationService = new PushNotification()
   }

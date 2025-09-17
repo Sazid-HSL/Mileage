@@ -1,4 +1,4 @@
-const axios = require('axios')
+import axios from 'axios'
 
 class LocationService {
   /**
@@ -18,4 +18,4 @@ class LocationService {
   }
 }
 
-module.exports = new LocationService()
+export default new LocationService()

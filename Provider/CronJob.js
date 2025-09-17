@@ -1,5 +1,5 @@
-const UnusualMileageNotifier = require('../Job/UnusualMileageNotifier')
+import UnusualMileageNotifier from '../Job/UnusualMileageNotifier.js'
 
-module.exports = {
+export default {
   unusual: new UnusualMileageNotifier()
 }

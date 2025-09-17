@@ -1,4 +1,4 @@
-const redis = require('redis')
+import redis from 'redis'
 
 const conf = {
   host: process.env.REDIS_HOST,
@@ -14,4 +14,4 @@ cache.on('error', function (err) {
   // console.log(`redis connect error`, err)
 })
 
-module.exports = { cache }
+export { cache }

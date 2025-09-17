@@ -1,6 +1,6 @@
-const BaseNotification = require('./BaseNotification')
+import BaseNotification from './BaseNotification.js'
 
-module.exports = class PasswordChangeNotification extends BaseNotification {
+export default class PasswordChangeNotification extends BaseNotification {
   getType() {
     return 23
   }

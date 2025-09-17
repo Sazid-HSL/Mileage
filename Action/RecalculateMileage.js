@@ -1,8 +1,8 @@
-const { sub, add } = require('date-fns')
-const MileageRepository = require("../Database/Repository/MileageRepository")
-const MileageWindow = require('../Util/MileageWindow')
+import { sub, add } from 'date-fns'
+import MileageRepository from "../Database/Repository/MileageRepository.js"
+import MileageWindow from '../Util/MileageWindow.js'
 
-module.exports = class RecalculateMileage {
+export default class RecalculateMileage {
   ofDate(date) {
     this.date = date
     this.date.setHours(0, 0, 0, 0)

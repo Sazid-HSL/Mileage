@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+import mongoose from 'mongoose'
+const { Schema } = mongoose
 
 const schema = new Schema({
   value: Number,
@@ -18,4 +18,4 @@ schema.methods.transform = function () {
   }
 }
 
-module.exports = mongoose.model('Mileage', schema)
+export default mongoose.model('Mileage', schema)

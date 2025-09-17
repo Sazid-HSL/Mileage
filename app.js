@@ -1,11 +1,11 @@
-require('dotenv').config()
+import 'dotenv/config'
 
-const jobs = require('./Provider/CronJob')
-const database = require('./Provider/MongoDB')
-const server = require('./Provider/HttpServer')
-const { handleError } = require('./Util/Exception')
+import jobs from './Provider/CronJob.js'
+import database from './Provider/MongoDB.js'
+import server from './Provider/HttpServer.js'
+import { handleError } from './Util/Exception.js'
 
-const ApiController = require('./Controller/ApiController')
+import ApiController from './Controller/ApiController.js'
 
 server.use('/api', new ApiController().register())
 server.use((err, req, res, next) => {

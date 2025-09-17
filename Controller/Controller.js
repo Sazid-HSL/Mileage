@@ -1,6 +1,6 @@
-const { Router } = require('express')
+import { Router } from 'express'
 
-module.exports = class Controller {
+export default class Controller {
   constructor() {
     this.router = new Router()
   }

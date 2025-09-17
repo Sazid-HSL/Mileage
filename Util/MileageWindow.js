@@ -1,8 +1,8 @@
-const turf = require('@turf/turf')
-const { startOfDay, add, sub } = require('date-fns')
-const LocationService = require('../Service/LocationService')
+import * as turf from '@turf/turf'
+import { startOfDay, add, sub } from 'date-fns'
+import LocationService from '../Service/LocationService.js'
 
-module.exports = class MileageWindow {
+export default class MileageWindow {
   static MIN_REQUIRED_LATLNG_COUNT = 5
 
   /**

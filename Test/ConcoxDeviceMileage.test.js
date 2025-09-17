@@ -1,11 +1,11 @@
-const turf = require('@turf/turf')
-const MongoDB = require('../Provider/MongoDB')
+import * as turf from '@turf/turf'
+import MongoDB from '../Provider/MongoDB.js'
 
-const Car = require('../Database/Model/Car')
-const Device = require('../Database/Model/Device')
-const Position = require('../Database/Model/Position')
-const Mileage = require('../Database/Model/Mileage')
-const { add } = require('date-fns')
+import Car from '../Database/Model/Car.js'
+import Device from '../Database/Model/Device.js'
+import Position from '../Database/Model/Position.js'
+import Mileage from '../Database/Model/Mileage.js'
+import { add } from 'date-fns'
 
 describe('Concox device mileage', () => {
   beforeAll(() => {

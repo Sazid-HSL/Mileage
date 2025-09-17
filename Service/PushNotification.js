@@ -1,7 +1,7 @@
-const axios = require('axios')
-const BaseNotification = require('../Util/Notification/BaseNotification')
+import axios from 'axios'
+import BaseNotification from '../Util/Notification/BaseNotification.js'
 
-module.exports = class PushNotification {
+export default class PushNotification {
   /**
    * @param {BaseNotification} notification
    */

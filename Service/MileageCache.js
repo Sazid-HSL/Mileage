@@ -1,5 +1,5 @@
-const { promisify } = require('util')
-const { cache } = require('../Provider/RedisCache')
+import { promisify } from 'util'
+import { cache } from '../Provider/RedisCache.js'
 
 class MileageCache {
   constructor() {
@@ -47,4 +47,4 @@ class MileageCache {
   }
 }
 
-module.exports = new MileageCache()
+export default new MileageCache()

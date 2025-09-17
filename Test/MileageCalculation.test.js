@@ -1,12 +1,12 @@
-const { add, sub, startOfDay, isEqual } = require('date-fns')
-const { cache } = require('../Provider/RedisCache')
-const MongoDB = require('../Provider/MongoDB')
-const MileageCache = require('../Service/MileageCache')
-const CalculateMileage = require('../Action/CalculateMileage')
-const LocationService = require('../Service/LocationService')
+import { add, sub, startOfDay, isEqual } from 'date-fns'
+import { cache } from '../Provider/RedisCache.js'
+import MongoDB from '../Provider/MongoDB.js'
+import MileageCache from '../Service/MileageCache.js'
+import CalculateMileage from '../Action/CalculateMileage.js'
+import LocationService from '../Service/LocationService.js'
 
-const Mileage = require('../Database/Model/Mileage')
-const MileageRepository = require('../Database/Repository/MileageRepository')
+import Mileage from '../Database/Model/Mileage.js'
+import MileageRepository from '../Database/Repository/MileageRepository.js'
 
 describe('Mileage calculation', () => {
   beforeAll(() => {

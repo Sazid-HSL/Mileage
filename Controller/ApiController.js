@@ -1,13 +1,13 @@
-const Controller = require('./Controller')
+import Controller from './Controller.js'
 
-const _ = require('lodash')
-const { startOfDay } = require('date-fns')
-const MileageRepository = require('../Database/Repository/MileageRepository')
-const MileageRecordList = require('../Action/MileageRecordList')
-const CalculateMileage = require('../Action/CalculateMileage')
-const RecalculateMileage = require('../Action/RecalculateMileage')
+import _ from 'lodash'
+import { startOfDay } from 'date-fns'
+import MileageRepository from '../Database/Repository/MileageRepository.js'
+import MileageRecordList from '../Action/MileageRecordList.js'
+import CalculateMileage from '../Action/CalculateMileage.js'
+import RecalculateMileage from '../Action/RecalculateMileage.js'
 
-module.exports = class ApiController extends Controller {
+export default class ApiController extends Controller {
   async list(req, res, next) {
     try {
       const action = new MileageRecordList()

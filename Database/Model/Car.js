@@ -1,5 +1,5 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+import mongoose from 'mongoose'
+const { Schema } = mongoose
 
 const schema = new Schema({
   reg_no: String,
@@ -8,4 +8,4 @@ const schema = new Schema({
   updated_at: Date,
 })
 
-module.exports = mongoose.model('Car', schema)
+export default mongoose.model('Car', schema)

@@ -1,7 +1,7 @@
-const { sub } = require('date-fns')
-const Mileage = require('../Model/Mileage')
+import { sub } from 'date-fns'
+import Mileage from '../Model/Mileage.js'
 
-module.exports = {
+export default {
   async findSingleRecord(car_id, date) {
     date = sub(date, { hours: 6 })
     return await Mileage.findOne({ car_id, when: date }).exec()

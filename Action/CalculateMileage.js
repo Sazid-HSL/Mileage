@@ -1,8 +1,8 @@
-const MileageRepository = require('../Database/Repository/MileageRepository')
-const MileageCache = require('../Service/MileageCache')
-const MileageWindow = require('../Util/MileageWindow')
+import MileageRepository from '../Database/Repository/MileageRepository.js'
+import MileageCache from '../Service/MileageCache.js'
+import MileageWindow from '../Util/MileageWindow.js'
 
-module.exports = class CalculateMileage {
+export default class CalculateMileage {
   withData(data) {
     this.carId = data.car_id
     this.deviceId = data.device_id

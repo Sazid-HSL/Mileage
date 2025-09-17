@@ -1,4 +1,4 @@
-module.exports = class BaseNotification {
+export default class BaseNotification {
   constructor() {
     this.userId = null
     this.payload = {}
