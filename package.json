@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "pm2-runtime start ecosystem.config.js",
+    "dev": "pm2-runtime start ecosystem.config.cjs",
     "test": "jest --detectOpenHandles"
   },
   "author": "palatok <shakilbuet63@gmail.com>",

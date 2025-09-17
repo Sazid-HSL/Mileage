@@ -1,6 +1,7 @@
 import { CronJob } from 'cron'
 import { startOfYesterday, sub } from 'date-fns'
-import { zonedTimeToUtc } from 'date-fns-tz'
+import dateFnsTz from 'date-fns-tz'
+const { zonedTimeToUtc } = dateFnsTz
 
 import Mileage from '../Database/Model/Mileage.js'
 import Car from '../Database/Model/Car.js'

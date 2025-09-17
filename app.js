@@ -1,4 +1,5 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
+dotenv.config()
 
 import jobs from './Provider/CronJob.js'
 import database from './Provider/MongoDB.js'
